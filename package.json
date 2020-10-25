@@ -1,0 +1,24 @@
+{
+  "name": "hwd3",
+  "version": "1.0.0",
+  "description": "hwd3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "browser-sync start --server \"p\" --files \"p\"",
+    "css:scss": "sass --style=compressed --sourcemap=none src/scss/pack.scss p/pack.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moonshotdesignco/hwd3.git"
+  },
+  "author": {
+    "name": "Harry Wilson Dunaway III",
+    "email": "hello@harrywilsondunaway.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moonshotdesignco/hwd3/issues"
+  },
+  "homepage": "https://github.com/moonshotdesignco/hwd3#readme"
+}
