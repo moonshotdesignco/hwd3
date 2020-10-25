@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "browser-sync start --server \"p\" --files \"p\"",
-    "css:scss": "sass --style=compressed --sourcemap=none src/scss/pack.scss p/pack.css"
+    "build": "npm run build:html && npm run css:scss && npm run css:autopre",
+    "build:html": "posthtml -c .posthtmlrc",
+    "css:scss": "sass --style=compressed --sourcemap=none src/scss/pack.scss src/css/pack.css",
+    "css:autopre": "postcss src/css/pack.css --use autoprefixer -o p/pack.css"
   },
   "repository": {
     "type": "git",

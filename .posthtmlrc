@@ -1,0 +1,12 @@
+{
+  "root": "src/html",
+  "input": "*.html",
+  "output": "p",
+  "plugins": {
+    "posthtml-modules": {
+      "root": "./src/html/m",
+      "initial": true
+    },
+    "htmlnano": {}
+  }
+}

@@ -1,3 +1,6 @@
+@import "colors";
+@import "fonts";
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,15 +8,46 @@
 }
 
 html {
-  background: #202020;
+  background: $black;
 }
 
 body {
-  font-family: "Helvetica Neue", "Segoe UI", "Open Sans", Roboto, Arial, sans-serif;
-  color: #e6e6e6;
+  background: inherit;
+  font-family: $fontstacksans;
+  color: $white;
   text-align: center;
+  a {
+    color: $gray;
+    &:hover,
+    &:active,
+    &:focus {
+      color: inherit;
+    }
+  }
+  width: 100%;
+  max-width: 1050px;
+  margin: auto;
+  padding: 0 1rem;
 }
 
-h1 {
-  margin: 3rem auto 2rem;
+.hero {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.main {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.foot {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  color: $lightergray;
+}
+
+.copy {
+  font-size: 0.75rem;
+  font-family: $fontstackserif;
+  font-style: italic;
 }
