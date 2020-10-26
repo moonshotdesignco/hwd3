@@ -17,10 +17,12 @@ body {
   color: $white;
   text-align: center;
   a {
+    text-decoration: none;
     color: $gray;
     &:hover,
     &:active,
     &:focus {
+      text-decoration: underline;
       color: inherit;
     }
   }
@@ -48,6 +50,5 @@ body {
 
 .copy {
   font-size: 0.75rem;
-  font-family: $fontstackserif;
-  font-style: italic;
+  font-family: $fontstackmono;
 }

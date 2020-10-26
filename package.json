@@ -5,11 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "browser-sync start --server \"p\" --files \"p\"",
-    "build": "npm run build:html && npm run css:scss && npm run css:autopre",
+    "css:scss": "sass --style=compressed --sourcemap=none src/scss/style.scss src/css/style.css",
+    "css:autopre": "postcss src/css/style.css --use autoprefixer -o p/style.css",
+    "watch:css": "onchange \"src/scss\" -- npm run build:css",
+    "watch:html": "onchange \"src/html\" -- npm run build:html",
+    "build:css": "npm run css:scss && npm run css:autopre",
     "build:html": "posthtml -c .posthtmlrc",
-    "css:scss": "sass --style=compressed --sourcemap=none src/scss/pack.scss src/css/pack.css",
-    "css:autopre": "postcss src/css/pack.css --use autoprefixer -o p/pack.css"
+    "watch": "run-p serve watch:*",
+    "build": "run-p build:*",
+    "serve": "browser-sync start --server \"p\" --files \"p\""
   },
   "repository": {
     "type": "git",
