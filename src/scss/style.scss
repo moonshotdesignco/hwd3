@@ -17,7 +17,6 @@ body {
   color: $white;
   text-align: center;
   a {
-    text-decoration: none;
     color: $gray;
     &:hover,
     &:active,
@@ -45,10 +44,24 @@ body {
 .foot {
   margin-top: 1rem;
   margin-bottom: 2rem;
-  color: $lightergray;
+  color: $lightgray;
+  a:hover,
+  a:focus,
+  a:active {
+    color: $white;
+  }
 }
 
 .copy {
   font-size: 0.75rem;
   font-family: $fontstackmono;
+}
+
+img {
+  width: 100%;
+  border-radius: 1rem;
+  margin: 1rem auto 4rem;
+  @media (min-width: 600px) {
+    width: 75%;
+  }
 }
