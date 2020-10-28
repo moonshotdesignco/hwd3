@@ -9,6 +9,8 @@
 
 html {
   background: $black;
+  width: 100%;
+  height: 100%;
 }
 
 body {
@@ -25,10 +27,21 @@ body {
       color: inherit;
     }
   }
-  width: 100%;
+  h1,
+  p {
+    margin-bottom: 0.25em;
+  }
+  width: 100vw;
   max-width: 1050px;
+  height: 100vh;
   margin: auto;
   padding: 0 1rem;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100%;
 }
 
 .hero {
@@ -37,8 +50,8 @@ body {
 }
 
 .main {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin: 2rem 0;
+  display: grid;
 }
 
 .foot {
@@ -60,7 +73,7 @@ body {
 img {
   width: 100%;
   border-radius: 1rem;
-  margin: 1rem auto 4rem;
+  margin: auto;
   @media (min-width: 600px) {
     width: 75%;
   }
