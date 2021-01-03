@@ -73,11 +73,11 @@ body {
   @media (min-width: 600px) {
     grid-template-columns: 1fr 1fr;
     .text {
-      margin-left: 0;
+      margin-right: 2rem;
     }
     .photo {
-      text-align: right;
-      margin-right: 0;
+      text-align: left;
+      margin-left: 2rem;
     }  
   }
 }
